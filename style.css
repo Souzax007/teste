@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  nav {
+    position: relative;
+    height: 70px;
+  }
+
+  .pai {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  }
+
+  .logo h1 {
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+
+  .barra-de-pesquisa {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+  }
+
+  .barra-de-pesquisa input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 250px;
+  }
+
+  .barra-de-pesquisa button {
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .barra-de-pesquisa button.ativo {
+    background-color: #007bff;
+  }
+  .menu-item {
+    position: relative;
+  }
+  .menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-item {
+    position: relative;
+  }
+  
+  .menu-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.menu-item i {
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+/* O texto começa invisível e com largura zero */
+.menu-item .texto {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  margin-left: 0;
+  transition: max-width 0.3s ease, opacity 0.3s ease, margin-left 0.3s ease;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Ao passar o mouse, o texto aparece com margem e espaço */
+.menu-item:hover .texto {
+  max-width: 100px; /* Ajuste conforme o tamanho dos textos */
+  opacity: 1;
+  margin-left: 8px;
+}
+
+/* Ícone muda de cor ao hover */
+.menu-item a:hover i {
+  color: #007bff;
+}
+
+  .produtos-container {
+padding: 40px 20px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.produtos-container h2 {
+text-align: center;
+margin-bottom: 30px;
+font-size: 28px;
+}
+
+.grid-produtos {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.card-produto {
+background-color: #f9f9f9;
+border-radius: 8px;
+padding: 15px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+text-align: center;
+transition: transform 0.2s;
+}
+
+.card-produto:hover {
+transform: translateY(-5px);
+}
+
+.card-produto img {
+max-width: 100%;
+height: auto;
+border-radius: 4px;
+}
+
+.card-produto h3 {
+margin: 10px 0;
+font-size: 18px;
+}
+
+.card-produto button {
+background-color: #007bff;
+border: none;
+padding: 10px 16px;
+color: white;
+font-weight: bold;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.card-produto button:hover {
+background-color: #0056b3;
+}
+.preco {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .preco-antigo {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 8px;
+  }
+  
+  .preco-atual {
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .contador-carrinho {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: inline-block;
+  }
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none !important ;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 8px 0;
+    min-width: 150px;
+    z-index: 100;
+  }
+  
+  .dropdown-menu li {
+    padding: 8px 16px;
+  }
+  
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* MOSTRAR dropdown ao passar o mouse */
+  .menu-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+  }
+
+  @media (max-width: 768px) {
+    .barra-de-pesquisa {
+      width: 90%;
+      flex-direction: column;
+    }
+
+    .barra-de-pesquisa input {
+      width: 100%;
+    }
+  }
