@@ -71,3 +71,5 @@ function adicionarAoCarrinho() {
       menu.style.display = 'none';
     }
   });
+
+  

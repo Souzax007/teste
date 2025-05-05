@@ -8,152 +8,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="pai">
-        <div class="logo">
-          <h1>Loja</h1>
-        </div>
+  <div id="navbar-container"></div>
 
-        <div class="menu">
-            <ul>
-                <li class="menu-item">
-                  <a href="#" title="Home">
-                    <i class="fas fa-home"></i>
-                    <span class="texto">Home</span>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" title="Produtos">
-                    <i class="fas fa-box"></i>
-                    <span class="texto">Produtos</span>
-                  </a>
-                </li>
-                <li class="menu-item dropdown">
-                    <a href="#" title="Categorias">
-                      <i class="fas fa-th-large"></i>
-                      <span class="texto">Categorias</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Eletrônicos</a></li>
-                      <li><a href="#">Roupas</a></li>
-                      <li><a href="#">Alimentos</a></li>
-                      <li><a href="#">Limpeza</a></li>
-                      <li><a href="#">Acessórios</a></li>
-                    </ul>
-                  </li>
-                  
-                    <li class="menu-item">
-                        <a href="#" title="Carrinho">
-                          <i class="fas fa-shopping-cart"></i>
-                          <span class="contador-carrinho" id="contadorCarrinho">0</span>
-                          <span class="texto">Carrinho</span>
-                        </a>
-                      </li>                                        
-                <li class="menu-item">
-                  <a href="#" title="Perfil">
-                    <i class="fas fa-user"></i>
-                    <span class="texto">Perfil</span>
-                  </a>
-                </li>
-              </ul>
-        </div>
-      </div>
-
-      <div class="barra-de-pesquisa">
-        <input type="text" placeholder="O que você deseja ?" id="campoPesquisa"/>
-        <button id="botaoPesquisa">Pesquisar</button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="produtos-container">
-        <h2>Produtos em destaque</h2>
-        <div class="grid-produtos">
-          <div class="card-produto">
-            <img src="https://supermercadosimperatriz.vteximg.com.br/arquivos/ids/163102-800-800/ALVEJANTEGIRANDOSOL2LLAVANDA.png?v=637750898671230000" alt="Fone de ouvido">
-            <h3>Fone Bluetooth</h3>
-            <p class="preco">
-              <span class="preco-antigo">R$ 300,00</span>
-              <span class="preco-atual">R$ 199,90</span>
-            </p>
-            <button>Comprar</button>
-          </div>
-      
-          <div class="card-produto">
-            <img src="https://www.supermercadosaomarcos.com.br/arquivos/LoginID_288/Produto/nescau-204.jpg" alt="Tênis">
-            <h3>Tênis Esportivo</h3>
-            <p class="preco">
-              <span class="preco-antigo">R$ 250,00</span>
-              <span class="preco-atual">R$ 179,90</span>
-            </p>
-            <button>Comprar</button>
-          </div>
-      
-          <div class="card-produto">
-            <img src="https://phygital-files.mercafacil.com/baiaazul/uploads/produto/sabao_po_brilhante_400g_b650a89d-006b-4f9f-bcae-096d8fbae480.png" alt="Relógio">
-            <h3>Relógio Smart</h3>
-            <p class="preco">
-              <span class="preco-antigo">R$ 450,00</span>
-              <span class="preco-atual">R$ 299,90</span>
-            </p>
-            <button>Comprar</button>
-          </div>
-      
-          <div class="card-produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2rR-YdBWJ1cGW6I83p3l2yMvLU0iUl7pGLw&s" alt="Camisa">
-            <h3>Camisa Casual</h3>
-            <p class="preco">
-              <span class="preco-antigo">R$ 120,00</span>
-              <span class="preco-atual">R$ 79,90</span>
-            </p>
-            <button>Comprar</button>
-          </div>
-
-          <div class="card-produto">
-            <img src="https://supermercadosimperatriz.vteximg.com.br/arquivos/ids/163102-800-800/ALVEJANTEGIRANDOSOL2LLAVANDA.png?v=637750898671230000" alt="Fone de ouvido">
-            <h3>Fone Bluetooth</h3>
-            <p class="preco">
-              <span class="preco-antigo">R$ 300,00</span>
-              <span class="preco-atual">R$ 199,90</span>
-            </p>
-            <button>Comprar</button>
-          </div>
-      
-          <div class="card-produto">
-            <img src="https://www.supermercadosaomarcos.com.br/arquivos/LoginID_288/Produto/nescau-204.jpg" alt="Tênis">
-            <h3>Tênis Esportivo</h3>
-            <p class="preco">
-              <span class="preco-antigo">R$ 250,00</span>
-              <span class="preco-atual">R$ 179,90</span>
-            </p>
-            <button>Comprar</button>
-          </div>
-      
-          <div class="card-produto">
-            <img src="https://phygital-files.mercafacil.com/baiaazul/uploads/produto/sabao_po_brilhante_400g_b650a89d-006b-4f9f-bcae-096d8fbae480.png" alt="Relógio">
-            <h3>Relógio Smart</h3>
-            <p class="preco">
-              <span class="preco-antigo">R$ 450,00</span>
-              <span class="preco-atual">R$ 299,90</span>
-            </p>
-            <button>Comprar</button>
-          </div>
-      
-          <div class="card-produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2rR-YdBWJ1cGW6I83p3l2yMvLU0iUl7pGLw&s" alt="Camisa">
-            <h3>Camisa Casual</h3>
-            <p class="preco">
-              <span class="preco-antigo">R$ 120,00</span>
-              <span class="preco-atual">R$ 79,90</span>
-            </p>
-            <button>Comprar</button>
-          </div>
-        </div>
-      </section>
-      
-  </main>
+  <main id="main-content"></main>
   <script src="script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Carrega a navbar e configura os links
+      fetch('menu.html')
+        .then(res => res.text())
+        .then(html => {
+          document.querySelector('#navbar-container').innerHTML = html;
+          // Adiciona eventos aos links da navbar
+          document.querySelectorAll('#navbar-container a[data-page]').forEach(link => {
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              loadPage(link.getAttribute('data-page'));
+            });
+          });
+        })
+        .catch(err => console.error('Erro ao carregar navbar:', err));
+  
+      // Carrega a home por padrão
+      loadPage('home.html');
+    });
+  
+    // Função para carregar o conteúdo no main
+    function loadPage(page) {
+      fetch(page)
+        .then(res => res.text())
+        .then(html => document.querySelector('#main-content').innerHTML = html)
+        .catch(err => console.error('Erro ao carregar página:', err));
+    }
+  </script>
+  
+  
 </body>
 </html>
